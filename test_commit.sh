@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "$(basename $PWD): $(date)" > RECORD
+message="$(basename $PWD): $(date)"
+echo "${message}" > RECORD
+git add .
+git commit -m "Adding to RECORD: ${message}"
